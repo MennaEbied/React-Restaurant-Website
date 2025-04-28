@@ -36,7 +36,7 @@ const Navbar = () => {
 
       {/* Desktop buttons - hidden on mobile */}
       <div className="hidden md:flex gap-2">
-        <button className="rounded-3xl bg-amber-800 w-20 h-10 text-white cursor-pointer hover:bg-amber-700 transition">
+        <button className="rounded-3xl bg-amber-800 w-20 h-10 text-white cursor-pointer hover:bg-amber-700  transition-colors duration-300">
           Sign In
         </button>
         <button className="rounded-3xl bg-white border border-amber-800 w-20 h-10 cursor-pointer hover:bg-amber-50 transition">
