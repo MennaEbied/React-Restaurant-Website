@@ -7,6 +7,8 @@ import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import ErrorBoundary from "./components/ErrorBoundary";
 import "./index.css";
+import SignUp from "./AuthPages/signUp";
+import SignIn from "./AuthPages/signIn";
 
 const App: React.FC = () => {
   return (
@@ -19,6 +21,8 @@ const App: React.FC = () => {
                 <Route path="/menu" element={<Menu />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/signup" element={<SignUp />} />
+                <Route path="/signin" element={<SignIn />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
