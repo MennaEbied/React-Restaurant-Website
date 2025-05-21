@@ -1,6 +1,6 @@
 const About: React.FC = () => {
   return (
-    <div className="min-h-screen bg-amber-50 font-montserrat py-8 px-4 md:px-8 lg:px-16">
+    <div className="min-h-screen bg-Rose font-montserrat py-8 px-4 md:px-8 lg:px-16 ">
       <div className="max-w-4xl mx-auto">
         {/* Page Header */}
         <div className="text-center mb-10 md:mb-12">

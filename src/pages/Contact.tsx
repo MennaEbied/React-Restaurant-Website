@@ -1,43 +1,44 @@
 import { useState } from "react";
 import { toast } from "sonner";
 const Contact: React.FC = () => {
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    message: ""
+    message: "",
   });
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Here you would typically send the data to your backend
     console.log("Form submitted:", formData);
-    
+
     // Show success toast
     toast("Message Sent", {
       description: "Thank you for your message! We'll get back to you soon.",
     });
-    
+
     // Reset form
     setFormData({
       name: "",
       email: "",
       phone: "",
-      message: ""
+      message: "",
     });
   };
 
   return (
-    <div className="min-h-screen bg-amber-50 font-montserrat py-8 px-4 md:px-8 lg:px-16">
+    <div className="min-h-screen bg-Rose font-montserrat py-8 px-4 md:px-8 lg:px-16">
       <div className="text-center mb-10 md:mb-12">
         <h1 className="font-semibold text-amber-800 text-3xl md:text-4xl lg:text-5xl mb-3">
           Contact Us
@@ -79,9 +80,12 @@ const Contact: React.FC = () => {
           <h2 className="text-2xl md:text-3xl text-amber-800 font-semibold mb-6">
             Send Us Message
           </h2>
-          <form  className="space-y-6" onSubmit={handleSubmit}>
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
-              <label className="font-medium text-gray-700 text-lg mb-1 block" htmlFor='name'>
+              <label
+                className="font-medium text-gray-700 text-lg mb-1 block"
+                htmlFor="name"
+              >
                 Name
               </label>
               <input
@@ -89,13 +93,16 @@ const Contact: React.FC = () => {
                 type="text"
                 className="w-full rounded-xl focus:outline-none border-gray-300 px-4 py-2 border"
                 value={formData.name}
-                  onChange={handleChange}
-                  id='name'
-                  name="name"
+                onChange={handleChange}
+                id="name"
+                name="name"
               />
             </div>
             <div>
-              <label className="font-medium text-gray-700 text-lg mb-1 block" htmlFor="email">
+              <label
+                className="font-medium text-gray-700 text-lg mb-1 block"
+                htmlFor="email"
+              >
                 Email
               </label>
               <input
@@ -109,7 +116,10 @@ const Contact: React.FC = () => {
               />
             </div>
             <div>
-              <label className="font-medium text-gray-700 text-lg mb-1 block" htmlFor="phone">
+              <label
+                className="font-medium text-gray-700 text-lg mb-1 block"
+                htmlFor="phone"
+              >
                 Phone (optional)
               </label>
               <input
@@ -117,13 +127,16 @@ const Contact: React.FC = () => {
                 type="tel"
                 className="w-full rounded-xl focus:outline-none border-gray-300 px-4 py-2 border"
                 id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
               />
             </div>
             <div>
-              <label className="font-medium text-gray-700 text-lg mb-1 block"  htmlFor="message">
+              <label
+                className="font-medium text-gray-700 text-lg mb-1 block"
+                htmlFor="message"
+              >
                 Message
               </label>
               <textarea
@@ -142,10 +155,10 @@ const Contact: React.FC = () => {
             >
               Send Message
             </button>
-            </form>
-          </div>
+          </form>
         </div>
       </div>
+    </div>
   );
 };
 

@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="sticky top-0 bg-amber-50 z-50 py-4 px-6 flex justify-between items-center w-full font-montserrat">
+    <div className="sticky top-0 bg-Rose z-50 py-4 px-6 flex justify-between items-center w-full font-montserrat">
       {/* Logo section */}
       <div className="flex items-center">
         <p className="font-semibold text-amber-800 text-xl md:ml-10">Samurai</p>
@@ -36,12 +36,18 @@ const Navbar = () => {
 
       {/* Desktop buttons - hidden on mobile */}
       <div className="hidden md:flex gap-2">
-        <button className="rounded-3xl bg-amber-800 w-20 h-10 text-white cursor-pointer hover:bg-amber-700  transition-colors duration-300">
+        <Link
+          to="/signin"
+          className="bg-amber-800 hover:bg-amber-700 text-white font-semibold rounded-full px-6 py-2 w-fit transition-colors duration-300"
+        >
           Sign In
-        </button>
-        <button className="rounded-3xl bg-white border border-amber-800 w-20 h-10 cursor-pointer hover:bg-amber-50 transition">
+        </Link>
+        <Link
+          to="/signup"
+          className="rounded-full w-fit bg-white border border-amber-800 px-6 py-2 hover:bg-Rose transition  duration-300 cursor-pointer font-semibold text-gray-800"
+        >
           Sign Up
-        </button>
+        </Link>
       </div>
 
       {/* Mobile menu button - shown only on mobile */}
@@ -59,7 +65,7 @@ const Navbar = () => {
 
       {/* Mobile menu dropdown */}
       {isOpen && (
-        <div className="absolute top-24 right-0 left-0 bg-amber-50 shadow-lg md:hidden z-50 border-t border-amber-100">
+        <div className="absolute top-24 right-0 left-0 bg-Rose shadow-lg md:hidden z-50 border-t border-amber-100">
           <div className="flex flex-col items-center py-4 space-y-6">
             <Link
               to="/"
@@ -90,12 +96,18 @@ const Navbar = () => {
               Contact Us
             </Link>
             <div className="flex gap-4 pt-2">
-              <button className="rounded-3xl bg-amber-800 w-20 h-10 text-white cursor-pointer hover:bg-amber-700 transition">
+              <Link
+                to="/signin"
+                className="bg-amber-800 hover:bg-amber-700 text-white font-semibold rounded-full px-6 py-2 w-fit transition-colors duration-300"
+              >
                 Sign In
-              </button>
-              <button className="rounded-3xl bg-white border border-amber-800 w-20 h-10 cursor-pointer hover:bg-amber-50 transition">
+              </Link>
+              <Link
+                to="/signup"
+                className="rounded-full w-fit bg-white border border-amber-800 px-6 py-2 hover:bg-Rose transition  duration-300 cursor-pointer font-semibold text-gray-800"
+              >
                 Sign Up
-              </button>
+              </Link>
             </div>
           </div>
         </div>

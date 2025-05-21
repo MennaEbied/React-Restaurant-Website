@@ -1,9 +1,10 @@
 import "../index.css";
 import image from "../assets/HomePage.png";
+import { Link } from "react-router-dom";
 
 const Home: React.FC = () => {
   return (
-    <div className="min-h-screen bg-amber-50 font-montserrat flex flex-col md:flex-row items-center justify-between px-4 md:px-10 py-16 relative">
+    <div className="min-h-screen bg-Rose font-montserrat flex flex-col md:flex-row items-center justify-between px-4 md:px-10 py-16 relative">
       {/* Text Content - appears first on mobile */}
       <div className="flex flex-col md:flex-row items-center gap-8 md:gap-30 animate-fade-in-down md:pl-10 mb-5 w-full md:w-auto">
         <div className="max-w-lg text-center md:text-left order-2 md:order-1">
@@ -18,9 +19,12 @@ const Home: React.FC = () => {
             freshly-made sushi and sashimi.
           </p>
           <div className="flex justify-center md:justify-start">
-            <button className="bg-amber-800 hover:bg-amber-700 text-white font-semibold rounded-full px-6 py-2 w-fit transition-colors duration-300">
+            <Link
+              to="/signup"
+              className="bg-amber-800 hover:bg-amber-700 text-white font-semibold rounded-full px-6 py-2 w-fit transition-colors duration-300"
+            >
               Order Now
-            </button>
+            </Link>
           </div>
         </div>
 

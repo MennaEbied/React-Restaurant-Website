@@ -3,7 +3,7 @@ import { menuItems } from "../components/MenuItems";
 const Menu: React.FC = () => {
   const categories = [...new Set(menuItems.map((item) => item.category))];
   return (
-    <div className="bg-amber-50 h-full font-montserrat">
+    <div className="bg-Rose h-full font-montserrat">
       <div className="container mx-auto  px-4 py-8">
         {categories.map((category) => (
           <div key={category} className="mb-12">
