@@ -3,12 +3,13 @@ import icon from "../assets/logo.png";
 import { useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { Menu, X, ShoppingCart } from "lucide-react";
-import { useCart } from "../contexts/CartContext";
+import { useSelector } from 'react-redux';
+import { RootState } from '../store';
 
 const Navbar = () => {
+  const cartCount = useSelector((state: RootState) => state.cart.totalCount);
   const [isOpen, setIsOpen] = useState(false);
   const { user } = useAuth();
-  const { cartCount } = useCart();
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };

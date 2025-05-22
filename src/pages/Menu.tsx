@@ -1,8 +1,14 @@
 import Counter from "../components/Counter";
 import { menuItems } from "../components/MenuItems";
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../store';
+import { incrementItem } from "../cartSlice";
+
 
 const Menu: React.FC = () => {
+  const cartItems = useSelector((state: RootState) => state.cart.items);
   const categories = [...new Set(menuItems.map((item) => item.category))];
+  const dispatch = useDispatch()
   return (
     <div className="bg-Rose h-full font-montserrat">
       <div className="container mx-auto  px-4 py-8">
@@ -35,11 +41,20 @@ const Menu: React.FC = () => {
                           ${item.price.toFixed(2)}
                         </span>
                         <p className="text-gray-600">{item.description}</p>
-                        <div className="flex flex-row items-center gap-2.5 md:gap-4">
-                          <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm transition-colors whitespace-nowrap">
+                        <div className="flex flex-row items-center gap-2.5 md:gap-4 mt-2">
+                          <button 
+                           onClick={() => {
+                            if (!cartItems[item.id] || cartItems[item.id] === 0) {
+                              dispatch(incrementItem(item.id));
+                            }
+                          }}
+                          className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm transition-colors whitespace-nowrap">
                             Add to Order
                           </button>
-                          <Counter />
+                           <Counter 
+                            itemId={item.id} 
+                            initialCount={cartItems[item.id] || 0} 
+                          />
                         </div>
                       </div>
                     </div>
