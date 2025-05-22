@@ -1,8 +1,10 @@
 import "../index.css";
 import image from "../assets/HomePage.png";
 import { Link } from "react-router-dom";
+import { useAuth } from "../contexts/AuthContext";
 
 const Home: React.FC = () => {
+  const { user } = useAuth();
   return (
     <div className="min-h-screen bg-Rose font-montserrat flex flex-col md:flex-row items-center justify-between px-4 md:px-10 py-16 relative">
       {/* Text Content - appears first on mobile */}
@@ -20,10 +22,10 @@ const Home: React.FC = () => {
           </p>
           <div className="flex justify-center md:justify-start">
             <Link
-              to="/signup"
+              to={user ? "/menu" : "/signup"}
               className="bg-amber-800 hover:bg-amber-700 text-white font-semibold rounded-full px-6 py-2 w-fit transition-colors duration-300"
             >
-              Order Now
+              {user ? "View Menu" : "Order Now"}
             </Link>
           </div>
         </div>
