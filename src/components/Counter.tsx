@@ -18,9 +18,9 @@ function Counter() {
   };
 
   return (
-    <div className="flex items-center bg-orange-200 rounded-full overflow-hidden mt-4 font-semibold font-montserrat">
+    <div className="flex items-center bg-orange-200 rounded-full overflow-hidden mt-4 font-semibold font-montserrat text-lg">
   <button className=" px-3 py-1 text-orange-800 " onClick={handleDecrement}>-</button>
-  <span className="px-4 font-medium text-orange-800">{count}</span>
+  <span className="px-4 text-orange-800">{count}</span>
   <button className=" px-3 py-1 text-orange-800 " onClick={handleIncrement}>+</button>
 </div>
   );

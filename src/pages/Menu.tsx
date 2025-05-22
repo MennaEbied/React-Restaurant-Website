@@ -35,11 +35,11 @@ const Menu: React.FC = () => {
                           ${item.price.toFixed(2)}
                         </span>
                         <p className="text-gray-600">{item.description}</p>
-                        <div className="flex flex-row gap-2.5">
-                        <button className="mt-4 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm transition-colors">
-                          Add to Order
-                        </button>
-                        <Counter />
+                        <div className="flex flex-row items-center gap-2.5 md:gap-4">
+                          <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm transition-colors whitespace-nowrap">
+                            Add to Order
+                          </button>
+                          <Counter />
                         </div>
                       </div>
                     </div>
