@@ -1,3 +1,4 @@
+import Counter from "../components/Counter";
 import { menuItems } from "../components/MenuItems";
 
 const Menu: React.FC = () => {
@@ -34,9 +35,12 @@ const Menu: React.FC = () => {
                           ${item.price.toFixed(2)}
                         </span>
                         <p className="text-gray-600">{item.description}</p>
+                        <div className="flex flex-row gap-2.5">
                         <button className="mt-4 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm transition-colors">
                           Add to Order
                         </button>
+                        <Counter />
+                        </div>
                       </div>
                     </div>
                   </div>
