@@ -2,6 +2,13 @@
 
 A modern responsive restaurant website built with React, Tailwind CSS, Firebase Authentication, and Redux for state management.
 
+## Live Demo : https://react-restaurant-website.pages.dev/
+
+## Screenshots :
+![image (1)](https://github.com/user-attachments/assets/82b08f9a-d746-4ea8-b0d6-4d2eb898299d)
+![image (2)](https://github.com/user-attachments/assets/eadf9c64-032a-4b84-9734-b2c7a56f6c43)
+![image (3)](https://github.com/user-attachments/assets/7a21ff1b-9203-4f7c-90c0-b9eae2d3075c)
+![image (4)](https://github.com/user-attachments/assets/7757a5a5-48d1-4fa3-8964-fd35e6f207ed)
 
 
 ## Features ✨
@@ -40,11 +47,8 @@ A modern responsive restaurant website built with React, Tailwind CSS, Firebase 
 
 3. Set Up Firebase:
    - Create a Firebase project
-   - Add your config to .env file:
-   
-  VITE_FIREBASE_API_KEY=your_api_key
-  VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
-  VITE_FIREBASE_PROJECT_ID=your_project_id
-  VITE_FIREBASE_STORAGE_BUCKET=your_bucket.appspot.com
-  VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-  VITE_FIREBASE_APP_ID=your_app_id
+   - Add your config to .env file
+     
+4. Start development server:
+   ```bash
+   npm run dev
