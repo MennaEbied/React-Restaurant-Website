@@ -6,6 +6,7 @@ import { incrementItem } from "../cartSlice";
 
 
 const Menu: React.FC = () => {
+  
   const cartItems = useSelector((state: RootState) => state.cart.items);
   const categories = [...new Set(menuItems.map((item) => item.category))];
   const dispatch = useDispatch()

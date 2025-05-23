@@ -9,6 +9,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import "./index.css";
 import SignUp from "./AuthPages/signUp";
 import SignIn from "./AuthPages/signIn";
+import Cart from "./pages/Cart";
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/menu" element={<Menu />} />
+                <Route path="/cart" element={<Cart />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/signup" element={<SignUp />} />
