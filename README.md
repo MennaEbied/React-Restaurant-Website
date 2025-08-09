@@ -52,4 +52,4 @@ A modern responsive restaurant website built with React, Tailwind CSS, Firebase 
 4. Start development server:
    ```bash
    npm run dev
- 5. 
+  
